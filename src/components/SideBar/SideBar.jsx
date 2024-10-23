@@ -1,40 +1,45 @@
 import './SideBar.css'
 import { FiMenu, FiMessageSquare } from "react-icons/fi";
-import { FaPlus } from "react-icons/fa6";
-import { CiCircleQuestion, CiSettings } from "react-icons/ci";
-import { GoHistory } from "react-icons/go";
+import { IoSettingsOutline } from "react-icons/io5";
+import { GoHistory, GoPlus, GoQuestion } from "react-icons/go";
+import { useState } from 'react';
 
 const SideBar = () => {
+
+    const [extended, setExtended] = useState(false)
+
   return (
     <div className="sidebar">
 
         <div className="top">
-            <FiMenu className='menu' />
+            <FiMenu onClick={()=>setExtended(prev=>!prev)} className='menu image-icon' size={25} />
             <div className='new-chat'>
-                <FaPlus />
-                <p>New Chat</p>
+                <GoPlus className='image-icon' size={25} />
+                {extended?<p>New Chat</p>: null}
             </div>
-            <div className="recent">
+
+            {extended
+            ?<div className="recent">
                 <p className="recent-title">Recent</p>
                 <div className="recent-entry">
-                    <FiMessageSquare />
+                    <FiMessageSquare className='image-icon' size={18} />
                     <p>What is react ...</p>
                 </div>
-            </div>
+            </div>: null}
         </div>
 
         <div className="bottom">
             <div className="bottom-item recent-entry">
-                <CiCircleQuestion />
-                <p>Help</p>
+                <GoQuestion className='image-icon' size={25} />
+                {extended?<p>Help</p>:null}
             </div>
             <div className="bottom-item recent-entry">
-                <GoHistory />
-                <p>Activity</p>
+                <GoHistory className='image-icon' size={25} />
+                {extended?<p>Activity</p>:null}
             </div>
             <div className="bottom-item recent-entry">
-                <CiSettings />
-                <p>Settings</p>
+                <IoSettingsOutline className='image-icon' size={25} />
+                {extended?<p>Settings</p>:null}
             </div>
         </div>
 
