@@ -1,9 +1,16 @@
 import { createContext } from "react";
 import PropTypes from 'prop-types';
+import run from "../config/gemini";
 
 export const Context = createContext();
 
 const ContextProvider = (props) => {
+
+    const onSent = async (prompt) => {
+        await run(prompt)
+    }
+
+    onSent("what is react js")
 
     const contextValue = {
 
@@ -14,7 +21,6 @@ const ContextProvider = (props) => {
             {props.children}
         </Context.Provider>
     )
-
 }
 
 ContextProvider.propTypes = {
