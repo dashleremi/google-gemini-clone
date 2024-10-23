@@ -1,4 +1,5 @@
 import './Main.css'
+import { CiRollingSuitcase, CiDesktop, CiBrightnessUp, CiAlarmOn, CiImageOn, CiMicrophoneOn, CiLocationArrow1 } from "react-icons/ci";
 
 const Main = () => {
   return (
@@ -16,8 +17,37 @@ const Main = () => {
 
             <div className="cards">
                 <div className="card">
-                    <p></p>
+                    <p className='topic'>Travel Inspiration: </p>
+                    <p>Plan a two-day itinerary for visiting historic cities.</p>
+                    <CiRollingSuitcase className='card-img' size={35} />
                 </div>
+                <div className="card">
+                    <p className='topic'>Tech Insights: </p>
+                    <p>Compare the pros and cons of using TypeScript and JavaScript.</p>
+                    <CiDesktop className='card-img' size={35} />
+                </div>
+                <div className="card">
+                    <p className='topic'>Health & Wellness: </p>
+                    <p>Suggest daily mindfulness exercises for beginneres.</p>
+                    <CiBrightnessUp className='card-img' size={35} />
+                </div>
+                <div className="card">
+                    <p className='topic'>Productivity Tips: </p>
+                    <p>Share time management techniques for remote workers.</p>
+                    <CiAlarmOn className='card-img' size={35} />
+                </div>
+            </div>
+
+            <div className="main-bottom">
+                <div className="search-box">
+                    <input type="text" placeholder='Enter a prompt here' />
+                    <div className='search-img'>
+                        <CiImageOn size={30} />
+                        <CiMicrophoneOn size={30} />
+                        <CiLocationArrow1 size={30} />
+                    </div>
+                </div>
+                <p className='bottom-info'>Gemini can make mistakes, so double-check it</p>
             </div>
         </div>
     </div>
