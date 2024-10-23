@@ -27,9 +27,11 @@ import {
   
       // Send a message to the AI model
       const result = await chatSession.sendMessage(prompt);
+      const response = result.response;
       
       // Log the AI's response to the console
       console.log(result.response.text());
+      return response.text();
     } catch (error) {
       // Log any errors encountered during the process
       console.error("An error occurred:", error);
