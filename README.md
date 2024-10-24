@@ -12,11 +12,6 @@ Real-Time Updates: Instant feedback for user prompts.
 Responsive Design: Optimized layout for various screen sizes using CSS.
 Gemini Icon: Custom integration of the Google Gemini branding in the UI.
 
-# Tech Stack
-Frontend: React (JavaScript), CSS
-Backend: [If applicable]
-API Integration: Google Generative AI (Gemini model)
-
 # Installation
 1. clone the repository
 2. install dependencies
