@@ -72,7 +72,7 @@ const Main = () => {
                     <div className='search-img'>
                         <CiImageOn size={30} />
                         <CiMicrophoneOn size={30} />
-                        <CiLocationArrow1 onClick={() => onSent()} size={30} />
+                        {input?<CiLocationArrow1 onClick={() => onSent()} size={30} />:null}
                     </div>
                 </div>
                 <p className='bottom-info'>Gemini can make mistakes, so double-check it</p>
