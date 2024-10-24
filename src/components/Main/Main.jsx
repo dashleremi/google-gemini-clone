@@ -54,8 +54,14 @@ const Main = () => {
                     <p>{recentPrompt}</p>
                 </div>
                 <div className="result-data">
-                    <SiGooglegemini />
-                    <p dangerouslySetInnerHTML={{__html:resultData}}></p>
+                    <SiGooglegemini className='gemini-img' size={30} color='#a5b4fc'/>
+                    {loading
+                    ?<div className='loader'>
+                        <hr />
+                        <hr />
+                        <hr />
+                    </div>
+                    :<p dangerouslySetInnerHTML={{__html:resultData}}></p>}
                 </div>
             </div>
             }
